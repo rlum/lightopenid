@@ -1,0 +1,4 @@
+TEST website for use of openid for using google as the openid provider
+for authorization of user based on his gmail address.
+
+location: Ubuntu904:/var/www
