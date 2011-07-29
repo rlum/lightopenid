@@ -1,0 +1,26 @@
+<html>
+<body>
+<?php 
+        if(isset($_GET['login'])) {
+			echo "isset = true\n";
+            $identity = 'https://www.google.com/accounts/o8/id';
+            $required = array('contact/email','email'); 
+		//request permission for email address of user. 
+		//see line 37 of openid.php for eg of ax extentions
+		//$ax_to_sreg defines array of supported options 
+			$returnUrl = 'http://richardlum.dyndns.org:8080/lightopenid/eg.php';
+		//tell google where to send the auth results
+		//in this case back to this php file
+		//see line 30 of openid.php for hints
+			echo "$_GET['login'] = " ;
+			echo $_GET['login'] ;
+			echo "$identity = " . $identity;
+			echo "$returnUrl = " . $returnUrl;
+        }
+
+?>
+<form action="?login" method="post">
+    <button>Login with Google</button>
+</form>
+</body>
+</html>
